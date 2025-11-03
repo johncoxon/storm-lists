@@ -1,0 +1,66 @@
+{
+    "access_right": "open",
+    "creators": [
+        {
+            "name": "Coxon, John C",
+            "orcid": "0000-0002-0166-6854",
+            "affiliation": "Northumbria University"
+        },
+        {
+            "name": "Walach, Maria-Theresia",
+            "orcid": "",
+            "affiliation": "Lancaster University"
+        }
+    ],
+    "description": "Implementations of geomagnetic storm list algorithms, including Walach & Grocott (2019).",
+    "grants": [
+        {
+            "id": "10.13039/100014013::ST/V004883/1"
+        }
+    ],
+    "keywords": [
+        "geomagnetic storms",
+    ],
+    "language": "eng",
+    "license": "AGPL-3.0-or-later",
+    "related_identifiers": [
+        {
+            "identifier": "https://github.com/johncoxon/storm-lists",
+            "relation": "isSupplementTo",
+            "resource_type": "software",
+            "scheme": "url"
+        },
+        {
+            "identifier": "",
+            "relation": "isDescribedBy",
+            "resource_type": "publication-article",
+            "scheme": "doi"
+        },
+        {
+            "identifier": "",
+            "relation": "isDescribedBy",
+            "resource_type": "publication-article",
+            "scheme": "doi"
+        }
+    ],
+    "subjects": [
+        {
+            "term": "Earth (planet)",
+            "identifier": "https://vocabularies.unesco.org/thesaurus/concept4083",
+            "scheme": "url"
+        },
+        {
+            "term": "Geophysics",
+            "identifier": "https://vocabularies.unesco.org/thesaurus/concept160",
+            "scheme": "url"
+        },
+        {
+            "term": "Space sciences",
+            "identifier": "https://vocabularies.unesco.org/thesaurus/mt2.30",
+            "scheme": "url"
+        }
+    ],
+    "title": "storm-lists",
+    "upload_type": "software",
+    "version": "1.0.0-alpha"
+}
