@@ -8,7 +8,7 @@
         },
         {
             "name": "Walach, Maria-Theresia",
-            "orcid": "",
+            "orcid": "0000-0002-9352-0659",
             "affiliation": "Lancaster University"
         }
     ],
@@ -62,5 +62,5 @@
     ],
     "title": "storm-lists",
     "upload_type": "software",
-    "version": "1.0.1"
+    "version": "1.0.2"
 }
