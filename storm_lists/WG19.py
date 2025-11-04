@@ -22,15 +22,18 @@ class WG19(List):
     """
     Geomagnetic storms identified using the algorithm described in Walach and Grocott (2019).
 
-    ----------
-    category_bins : np.ndarray[int]
+    Variables
+    ---------
+    list : pandas.DataFrame
+        A DataFrame describing each of the identified storms.
+    start_time : datetime.datetime
+        The start of the window in which storms were identified.
     end_time : datetime.datetime
         The end of the window in which storms were identified.
     quiet_level : int
-    start_time : datetime.datetime
-        The start of the window in which storms were identified.
-    list : pandas.DataFrame
-        A DataFrame describing each of the identified storms.
+        The quiet level used to generate the storm list.
+    category_bins : np.ndarray[int]
+        The thresholds used for the three storm categories.
     """
 
     def __init__(self, time, symh, quiet_level=-15, category_bins=np.array([-80, -150, -300])):
@@ -40,7 +43,7 @@ class WG19(List):
         time : np.ndarray[datetime.datetime]
             Timestamps of the OMNI data being used.
         symh : np.ndarray[int]
-            SYM-H levels in nT from OMNI.
+            SYM-H levels in nT.
         quiet_level : int, optional, default -15
             The quiet level to use, defaults to -15 nT as in the original paper.
         category_bins : np.ndarray[int], optional, default [-50, -150, -300]
@@ -48,6 +51,8 @@ class WG19(List):
         """
         self.category_bins = category_bins
         self.quiet_level = quiet_level
+
+        symh = symh.astype(int)
 
         self._crossings = self._find_quiet_level_crossings(symh)
         self._storm_categories = np.zeros_like(time, dtype=int)
@@ -132,7 +137,7 @@ class WG19(List):
 
         Returns
         -------
-        storm : Storm
+        storm : dict
             The next identified storm.
         """
         minimum_symh = np.nanmin(symh[self._storm_categories == 0])
@@ -151,9 +156,9 @@ class WG19(List):
             storm_end = len(time) - 1
 
         n_minutes = 18 * 60
-        initial_peak = (np.nanargmax(symh[main_start - n_minutes:main_start])
-                        + main_start - n_minutes)
+        initial_peak = np.nanargmax(symh[main_start - n_minutes:main_start]) + main_start - n_minutes
 
+        # noinspection PyTypeChecker
         initial_turning_point = np.searchsorted(self._crossings, initial_peak) - 1
         if initial_turning_point < 0:
             initial_start = 0
