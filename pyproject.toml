@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "storm-lists"
-version = "1.0.0"
+version = "1.0.1"
 dependencies = [
     "matplotlib",
     "numpy",
@@ -30,4 +30,5 @@ classifiers = ["Development Status :: 4 - Beta",
 ]
 
 [project.urls]
+doi = "https://doi.org/10.5281/zenodo.17521944"
 repository = "https://github.com/johncoxon/storm-lists"
