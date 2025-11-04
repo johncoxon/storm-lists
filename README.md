@@ -21,7 +21,7 @@ John C Coxon was supported during this work by Science and Technology Facilities
 To install and test the model, simply type:
 
 ```
-pip install facer-model
+pip install storm-lists
 ```
 
 ## Usage
