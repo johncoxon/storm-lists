@@ -19,7 +19,7 @@
         }
     ],
     "keywords": [
-        "geomagnetic storms",
+        "geomagnetic storms"
     ],
     "language": "eng",
     "license": "AGPL-3.0-or-later",
@@ -31,13 +31,13 @@
             "scheme": "url"
         },
         {
-            "identifier": "",
+            "identifier": "10.5194/angeo-31-349-2013",
             "relation": "isDescribedBy",
             "resource_type": "publication-article",
             "scheme": "doi"
         },
         {
-            "identifier": "",
+            "identifier": "10.1029/2019JA026816",
             "relation": "isDescribedBy",
             "resource_type": "publication-article",
             "scheme": "doi"
@@ -62,5 +62,5 @@
     ],
     "title": "storm-lists",
     "upload_type": "software",
-    "version": "1.0.0-alpha"
+    "version": "1.0.0"
 }
