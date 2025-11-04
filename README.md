@@ -1,7 +1,7 @@
 # storm-lists
 
 [![PyPI badge](https://badge.fury.io/py/storm-lists.svg)](https://badge.fury.io/py/storm-lists)
-[![Zenodo badge](https://zenodo.org/badge/DOI/10.5281/zenodo.17521945.svg)](https://doi.org/10.5281/zenodo.17521945)
+[![Zenodo badge](https://zenodo.org/badge/1088748199.svg)](https://doi.org/10.5281/zenodo.17521945)
 
 This package compiles Python implementations of various geomagnetic storm lists.
 
